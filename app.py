@@ -596,8 +596,7 @@ def analyze(data, spot, vix, symbol, expiry):
             f"Active Sup: {active_sup}",
             f"Trade: {trade_note}",
         ])
-        send_telegram("
-".join(lines))
+        send_telegram("".join(lines))
         st.session_state.last_reported_minute = now.minute
 
     st.session_state.prev_vix = vix
